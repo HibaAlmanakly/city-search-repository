@@ -1,0 +1,8 @@
+<div>
+  <p>Sort By:</p>
+  <select [(ngModel)]="sort" (ngModelChange)="sortBy($event)" class="select sort-select">
+    <option value="price">Price</option>
+    <option value="recommended">Recommended</option>
+    <option value="distance">Distance</option>
+  </select>
+</div>
