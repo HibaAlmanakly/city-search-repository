@@ -1,0 +1,21 @@
+<div>
+  <h3 *ngIf="city && city.name" class="cars-in-city">Cars in {{city.name}}</h3>
+  <div *ngFor="let data of results">
+    <p><b>Car Details Details</b></p>
+    <ul>
+      <li><b>model: </b> {{data.car.model}}</li>
+      <li><b>fuel Type: </b> {{data.car.fuelType}}</li>
+      <li><b>gear: </b> {{data.car.gear}}</li>
+      <li><b>make: </b> {{data.car.make}}</li>
+      <li><b>year: </b> {{data.car.year}}</li>
+      <li><b>seats: </b> {{data.car.seats}}</li>
+      <li><b>reviewAvg: </b> {{data.car.reviewAvg}}</li>
+      <li><b>reviewCount: </b> {{data.car.reviewCount}}</li>
+    </ul>
+    <p><b>Price Details</b></p>
+    <ul>
+      <li><b>price: </b> {{data.priceInformation.price}}</li>
+      <li><b>freeKilometersPerDay: </b> {{data.priceInformation.freeKilometersPerDay}}</li>
+    </ul>
+  </div>
+</div>

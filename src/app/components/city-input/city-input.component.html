@@ -1,0 +1,22 @@
+<div>
+  <p>Please type the car name:</p>
+  <input [(ngModel)]="cityName" (ngModelChange)="updateCity()" type="text" class="input car-input"/>
+
+  <ng-container *ngIf="isLoading; then loadingTemp; else loadingCitiesTemp">
+  </ng-container>
+</div>
+
+<ng-template #loadingTemp>
+  <div>Loading ...</div>
+</ng-template>
+
+<ng-template #loadingCitiesTemp>
+  <p *ngIf="errorMessage">{{errorMessage}}</p>
+
+  <ul *ngIf="citiesList.length>0" class="cities-list">
+    <li *ngFor="let city of citiesList">
+      {{city.name}}
+    </li>
+  </ul>
+
+</ng-template>
